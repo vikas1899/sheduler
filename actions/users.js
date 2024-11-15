@@ -25,9 +25,10 @@ export async function updateUsername(username) {
   });
 
   // Update username in Clerk
-  await clerkClient.users.updateUser(userId, {
+  await clerkClient().users.updateUser(userId, {
     username,
   });
+  
 
   return { success: true };
 }
